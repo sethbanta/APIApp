@@ -36,6 +36,28 @@ namespace APIApp
             this.btnClearRtb = new System.Windows.Forms.Button();
             this.btnGetByNumber = new System.Windows.Forms.Button();
             this.tbGetByNumber = new System.Windows.Forms.TextBox();
+            this.btnUpdateByNameToggle = new System.Windows.Forms.Button();
+            this.btnUpdateByNumberToggle = new System.Windows.Forms.Button();
+            this.btnAddNewToggle = new System.Windows.Forms.Button();
+            this.btnDeleteToggle = new System.Windows.Forms.Button();
+            this.txtToggledName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.txtToggledPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblAge = new System.Windows.Forms.Label();
+            this.txtToggledAge = new System.Windows.Forms.TextBox();
+            this.lblFavoritePizza = new System.Windows.Forms.Label();
+            this.txtToggledFavoritePizza = new System.Windows.Forms.TextBox();
+            this.btnToggledUpdateByName = new System.Windows.Forms.Button();
+            this.lblToggledUpdateByName = new System.Windows.Forms.Label();
+            this.txtToggledUpdateByName = new System.Windows.Forms.TextBox();
+            this.txtToggledUpdateByNumber = new System.Windows.Forms.TextBox();
+            this.lblToggledUpdateByNumber = new System.Windows.Forms.Label();
+            this.btnToggledAdd = new System.Windows.Forms.Button();
+            this.btnToggledUpdateByNumber = new System.Windows.Forms.Button();
+            this.lblToggledDelete = new System.Windows.Forms.Label();
+            this.txtToggledDelete = new System.Windows.Forms.TextBox();
+            this.btnToggledDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGetAll
@@ -102,11 +124,243 @@ namespace APIApp
             this.tbGetByNumber.TabIndex = 7;
             this.tbGetByNumber.TextChanged += new System.EventHandler(this.tbGetByNumber_TextChanged);
             // 
+            // btnUpdateByNameToggle
+            // 
+            this.btnUpdateByNameToggle.Location = new System.Drawing.Point(12, 107);
+            this.btnUpdateByNameToggle.Name = "btnUpdateByNameToggle";
+            this.btnUpdateByNameToggle.Size = new System.Drawing.Size(97, 23);
+            this.btnUpdateByNameToggle.TabIndex = 8;
+            this.btnUpdateByNameToggle.Text = "Update by name";
+            this.btnUpdateByNameToggle.UseVisualStyleBackColor = true;
+            this.btnUpdateByNameToggle.Click += new System.EventHandler(this.btnUpdateByNameToggle_Click);
+            // 
+            // btnUpdateByNumberToggle
+            // 
+            this.btnUpdateByNumberToggle.Location = new System.Drawing.Point(115, 107);
+            this.btnUpdateByNumberToggle.Name = "btnUpdateByNumberToggle";
+            this.btnUpdateByNumberToggle.Size = new System.Drawing.Size(105, 23);
+            this.btnUpdateByNumberToggle.TabIndex = 9;
+            this.btnUpdateByNumberToggle.Text = "Update by number";
+            this.btnUpdateByNumberToggle.UseVisualStyleBackColor = true;
+            this.btnUpdateByNumberToggle.Click += new System.EventHandler(this.btnUpdateByNumberToggle_Click);
+            // 
+            // btnAddNewToggle
+            // 
+            this.btnAddNewToggle.Location = new System.Drawing.Point(226, 107);
+            this.btnAddNewToggle.Name = "btnAddNewToggle";
+            this.btnAddNewToggle.Size = new System.Drawing.Size(65, 23);
+            this.btnAddNewToggle.TabIndex = 10;
+            this.btnAddNewToggle.Text = "Add new";
+            this.btnAddNewToggle.UseVisualStyleBackColor = true;
+            this.btnAddNewToggle.Click += new System.EventHandler(this.btnAddNewToggle_Click);
+            // 
+            // btnDeleteToggle
+            // 
+            this.btnDeleteToggle.Location = new System.Drawing.Point(297, 107);
+            this.btnDeleteToggle.Name = "btnDeleteToggle";
+            this.btnDeleteToggle.Size = new System.Drawing.Size(69, 23);
+            this.btnDeleteToggle.TabIndex = 11;
+            this.btnDeleteToggle.Text = "Delete";
+            this.btnDeleteToggle.UseVisualStyleBackColor = true;
+            this.btnDeleteToggle.Click += new System.EventHandler(this.btnDeleteToggle_Click);
+            // 
+            // txtToggledName
+            // 
+            this.txtToggledName.Location = new System.Drawing.Point(88, 309);
+            this.txtToggledName.Name = "txtToggledName";
+            this.txtToggledName.Size = new System.Drawing.Size(100, 20);
+            this.txtToggledName.TabIndex = 12;
+            this.txtToggledName.Visible = false;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(9, 312);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(35, 13);
+            this.lblName.TabIndex = 13;
+            this.lblName.Text = "Name";
+            this.lblName.Visible = false;
+            // 
+            // lblPhoneNumber
+            // 
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Location = new System.Drawing.Point(9, 340);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(78, 13);
+            this.lblPhoneNumber.TabIndex = 14;
+            this.lblPhoneNumber.Text = "Phone Number";
+            this.lblPhoneNumber.Visible = false;
+            // 
+            // txtToggledPhoneNumber
+            // 
+            this.txtToggledPhoneNumber.Location = new System.Drawing.Point(88, 336);
+            this.txtToggledPhoneNumber.Name = "txtToggledPhoneNumber";
+            this.txtToggledPhoneNumber.Size = new System.Drawing.Size(100, 20);
+            this.txtToggledPhoneNumber.TabIndex = 15;
+            this.txtToggledPhoneNumber.Visible = false;
+            // 
+            // lblAge
+            // 
+            this.lblAge.AutoSize = true;
+            this.lblAge.Location = new System.Drawing.Point(9, 362);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(26, 13);
+            this.lblAge.TabIndex = 16;
+            this.lblAge.Text = "Age";
+            this.lblAge.Visible = false;
+            // 
+            // txtToggledAge
+            // 
+            this.txtToggledAge.Location = new System.Drawing.Point(88, 362);
+            this.txtToggledAge.Name = "txtToggledAge";
+            this.txtToggledAge.Size = new System.Drawing.Size(100, 20);
+            this.txtToggledAge.TabIndex = 17;
+            this.txtToggledAge.Visible = false;
+            // 
+            // lblFavoritePizza
+            // 
+            this.lblFavoritePizza.AutoSize = true;
+            this.lblFavoritePizza.Location = new System.Drawing.Point(9, 390);
+            this.lblFavoritePizza.Name = "lblFavoritePizza";
+            this.lblFavoritePizza.Size = new System.Drawing.Size(73, 13);
+            this.lblFavoritePizza.TabIndex = 18;
+            this.lblFavoritePizza.Text = "Favorite Pizza";
+            this.lblFavoritePizza.Visible = false;
+            // 
+            // txtToggledFavoritePizza
+            // 
+            this.txtToggledFavoritePizza.Location = new System.Drawing.Point(88, 387);
+            this.txtToggledFavoritePizza.Name = "txtToggledFavoritePizza";
+            this.txtToggledFavoritePizza.Size = new System.Drawing.Size(100, 20);
+            this.txtToggledFavoritePizza.TabIndex = 19;
+            this.txtToggledFavoritePizza.Visible = false;
+            // 
+            // btnToggledUpdateByName
+            // 
+            this.btnToggledUpdateByName.Location = new System.Drawing.Point(99, 413);
+            this.btnToggledUpdateByName.Name = "btnToggledUpdateByName";
+            this.btnToggledUpdateByName.Size = new System.Drawing.Size(75, 23);
+            this.btnToggledUpdateByName.TabIndex = 20;
+            this.btnToggledUpdateByName.Text = "Update";
+            this.btnToggledUpdateByName.UseVisualStyleBackColor = true;
+            this.btnToggledUpdateByName.Visible = false;
+            this.btnToggledUpdateByName.Click += new System.EventHandler(this.btnToggledUpdateByName_Click);
+            // 
+            // lblToggledUpdateByName
+            // 
+            this.lblToggledUpdateByName.AutoSize = true;
+            this.lblToggledUpdateByName.Location = new System.Drawing.Point(9, 161);
+            this.lblToggledUpdateByName.Name = "lblToggledUpdateByName";
+            this.lblToggledUpdateByName.Size = new System.Drawing.Size(83, 13);
+            this.lblToggledUpdateByName.TabIndex = 21;
+            this.lblToggledUpdateByName.Text = "Name to update";
+            this.lblToggledUpdateByName.Visible = false;
+            // 
+            // txtToggledUpdateByName
+            // 
+            this.txtToggledUpdateByName.Location = new System.Drawing.Point(98, 158);
+            this.txtToggledUpdateByName.Name = "txtToggledUpdateByName";
+            this.txtToggledUpdateByName.Size = new System.Drawing.Size(192, 20);
+            this.txtToggledUpdateByName.TabIndex = 22;
+            this.txtToggledUpdateByName.Visible = false;
+            // 
+            // txtToggledUpdateByNumber
+            // 
+            this.txtToggledUpdateByNumber.Location = new System.Drawing.Point(107, 158);
+            this.txtToggledUpdateByNumber.Name = "txtToggledUpdateByNumber";
+            this.txtToggledUpdateByNumber.Size = new System.Drawing.Size(193, 20);
+            this.txtToggledUpdateByNumber.TabIndex = 23;
+            this.txtToggledUpdateByNumber.Visible = false;
+            // 
+            // lblToggledUpdateByNumber
+            // 
+            this.lblToggledUpdateByNumber.AutoSize = true;
+            this.lblToggledUpdateByNumber.Location = new System.Drawing.Point(9, 161);
+            this.lblToggledUpdateByNumber.Name = "lblToggledUpdateByNumber";
+            this.lblToggledUpdateByNumber.Size = new System.Drawing.Size(92, 13);
+            this.lblToggledUpdateByNumber.TabIndex = 24;
+            this.lblToggledUpdateByNumber.Text = "Number to update";
+            this.lblToggledUpdateByNumber.Visible = false;
+            // 
+            // btnToggledAdd
+            // 
+            this.btnToggledAdd.Location = new System.Drawing.Point(98, 413);
+            this.btnToggledAdd.Name = "btnToggledAdd";
+            this.btnToggledAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnToggledAdd.TabIndex = 25;
+            this.btnToggledAdd.Text = "Add";
+            this.btnToggledAdd.UseVisualStyleBackColor = true;
+            this.btnToggledAdd.Visible = false;
+            this.btnToggledAdd.Click += new System.EventHandler(this.btnToggledAdd_Click);
+            // 
+            // btnToggledUpdateByNumber
+            // 
+            this.btnToggledUpdateByNumber.Location = new System.Drawing.Point(99, 413);
+            this.btnToggledUpdateByNumber.Name = "btnToggledUpdateByNumber";
+            this.btnToggledUpdateByNumber.Size = new System.Drawing.Size(75, 23);
+            this.btnToggledUpdateByNumber.TabIndex = 26;
+            this.btnToggledUpdateByNumber.Text = "Update";
+            this.btnToggledUpdateByNumber.UseVisualStyleBackColor = true;
+            this.btnToggledUpdateByNumber.Visible = false;
+            this.btnToggledUpdateByNumber.Click += new System.EventHandler(this.btnToggledUpdateByNumber_Click);
+            // 
+            // lblToggledDelete
+            // 
+            this.lblToggledDelete.AutoSize = true;
+            this.lblToggledDelete.Location = new System.Drawing.Point(9, 214);
+            this.lblToggledDelete.Name = "lblToggledDelete";
+            this.lblToggledDelete.Size = new System.Drawing.Size(79, 13);
+            this.lblToggledDelete.TabIndex = 27;
+            this.lblToggledDelete.Text = "Name to delete";
+            this.lblToggledDelete.Visible = false;
+            // 
+            // txtToggledDelete
+            // 
+            this.txtToggledDelete.Location = new System.Drawing.Point(94, 211);
+            this.txtToggledDelete.Name = "txtToggledDelete";
+            this.txtToggledDelete.Size = new System.Drawing.Size(206, 20);
+            this.txtToggledDelete.TabIndex = 28;
+            this.txtToggledDelete.Visible = false;
+            // 
+            // btnToggledDelete
+            // 
+            this.btnToggledDelete.Location = new System.Drawing.Point(145, 237);
+            this.btnToggledDelete.Name = "btnToggledDelete";
+            this.btnToggledDelete.Size = new System.Drawing.Size(88, 23);
+            this.btnToggledDelete.TabIndex = 29;
+            this.btnToggledDelete.Text = "Delete (serious)";
+            this.btnToggledDelete.UseVisualStyleBackColor = true;
+            this.btnToggledDelete.Visible = false;
+            this.btnToggledDelete.Click += new System.EventHandler(this.btnToggledDelete_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnToggledDelete);
+            this.Controls.Add(this.txtToggledDelete);
+            this.Controls.Add(this.lblToggledDelete);
+            this.Controls.Add(this.btnToggledUpdateByNumber);
+            this.Controls.Add(this.btnToggledAdd);
+            this.Controls.Add(this.lblToggledUpdateByNumber);
+            this.Controls.Add(this.txtToggledUpdateByNumber);
+            this.Controls.Add(this.txtToggledUpdateByName);
+            this.Controls.Add(this.lblToggledUpdateByName);
+            this.Controls.Add(this.btnToggledUpdateByName);
+            this.Controls.Add(this.txtToggledFavoritePizza);
+            this.Controls.Add(this.lblFavoritePizza);
+            this.Controls.Add(this.txtToggledAge);
+            this.Controls.Add(this.lblAge);
+            this.Controls.Add(this.txtToggledPhoneNumber);
+            this.Controls.Add(this.lblPhoneNumber);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtToggledName);
+            this.Controls.Add(this.btnDeleteToggle);
+            this.Controls.Add(this.btnAddNewToggle);
+            this.Controls.Add(this.btnUpdateByNumberToggle);
+            this.Controls.Add(this.btnUpdateByNameToggle);
             this.Controls.Add(this.tbGetByNumber);
             this.Controls.Add(this.btnGetByNumber);
             this.Controls.Add(this.btnClearRtb);
@@ -130,6 +384,28 @@ namespace APIApp
         private System.Windows.Forms.Button btnGetByNumber;
         private System.Windows.Forms.TextBox tbGetByNumber;
         private System.Windows.Forms.TextBox tbGetByName;
+        private System.Windows.Forms.Button btnUpdateByNameToggle;
+        private System.Windows.Forms.Button btnUpdateByNumberToggle;
+        private System.Windows.Forms.Button btnAddNewToggle;
+        private System.Windows.Forms.Button btnDeleteToggle;
+        private System.Windows.Forms.TextBox txtToggledName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.TextBox txtToggledPhoneNumber;
+        private System.Windows.Forms.Label lblAge;
+        private System.Windows.Forms.TextBox txtToggledAge;
+        private System.Windows.Forms.Label lblFavoritePizza;
+        private System.Windows.Forms.TextBox txtToggledFavoritePizza;
+        private System.Windows.Forms.Button btnToggledUpdateByName;
+        private System.Windows.Forms.Label lblToggledUpdateByName;
+        private System.Windows.Forms.TextBox txtToggledUpdateByName;
+        private System.Windows.Forms.TextBox txtToggledUpdateByNumber;
+        private System.Windows.Forms.Label lblToggledUpdateByNumber;
+        private System.Windows.Forms.Button btnToggledAdd;
+        private System.Windows.Forms.Button btnToggledUpdateByNumber;
+        private System.Windows.Forms.Label lblToggledDelete;
+        private System.Windows.Forms.TextBox txtToggledDelete;
+        private System.Windows.Forms.Button btnToggledDelete;
     }
 }
 

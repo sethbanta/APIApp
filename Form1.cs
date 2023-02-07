@@ -105,5 +105,92 @@ namespace APIApp
             rtbOutput.Text += json;
             rtbOutput.Text += Environment.NewLine;
         }
+
+        private void btnUpdateByNameToggle_Click(object sender, EventArgs e)
+        {
+            hideUpdateControls();
+            makeUpdateControlsVisible();
+            lblToggledUpdateByName.Visible = true;
+            txtToggledUpdateByName.Visible = true;
+            btnToggledUpdateByName.Visible = true;
+        }
+
+        private void makeUpdateControlsVisible()
+        {
+            lblName.Visible = true;
+            lblPhoneNumber.Visible = true;
+            lblAge.Visible = true;
+            lblFavoritePizza.Visible = true;
+            txtToggledName.Visible = true;
+            txtToggledPhoneNumber.Visible = true;
+            txtToggledAge.Visible = true;
+            txtToggledFavoritePizza.Visible = true;
+        }
+
+        private void hideUpdateControls()
+        {
+            lblName.Visible = false;
+            lblPhoneNumber.Visible = false;
+            lblAge.Visible = false;
+            lblFavoritePizza.Visible = false;
+            txtToggledName.Visible = false;
+            txtToggledPhoneNumber.Visible = false;
+            txtToggledAge.Visible = false;
+            txtToggledFavoritePizza.Visible = false;
+            btnToggledUpdateByName.Visible = false;
+            lblToggledUpdateByName.Visible = false;
+            txtToggledUpdateByName.Visible = false;
+            lblToggledUpdateByNumber.Visible = false;
+            txtToggledUpdateByNumber.Visible = false;
+            btnToggledUpdateByNumber.Visible = false;
+            btnToggledAdd.Visible = false;
+            lblToggledDelete.Visible = false;
+            txtToggledDelete.Visible = false;
+            btnToggledDelete.Visible = false;
+        }
+
+        private void btnUpdateByNumberToggle_Click(object sender, EventArgs e)
+        {
+            hideUpdateControls();
+            makeUpdateControlsVisible();
+            lblToggledUpdateByNumber.Visible = true;
+            txtToggledUpdateByNumber.Visible = true;
+            btnToggledUpdateByNumber.Visible = true;
+        }
+
+        private void btnToggledUpdateByName_Click(object sender, EventArgs e)
+        {
+            //TODO: take in the values put in the text boxes and then send a put request with the data to the api
+        }
+
+        private void btnAddNewToggle_Click(object sender, EventArgs e)
+        {
+            hideUpdateControls();
+            makeUpdateControlsVisible();
+            btnToggledAdd.Visible = true;
+        }
+
+        private void btnDeleteToggle_Click(object sender, EventArgs e)
+        {
+            hideUpdateControls();
+            lblToggledDelete.Visible = true;
+            txtToggledDelete.Visible = true;
+            btnToggledDelete.Visible = true;
+        }
+
+        private void btnToggledUpdateByNumber_Click(object sender, EventArgs e)
+        {
+            //TODO: take in the values put in the text boxes and then send a put request with the data to the api
+        }
+
+        private void btnToggledAdd_Click(object sender, EventArgs e)
+        {
+            //TODO: take in the values put in the text boxes and then send a put request with the data to the api
+        }
+
+        private void btnToggledDelete_Click(object sender, EventArgs e)
+        {
+            //TODO: take in the value put in the text box and then send a delete request
+        }
     }
 }
