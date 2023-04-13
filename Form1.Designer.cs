@@ -58,6 +58,10 @@ namespace APIApp
             this.lblToggledDelete = new System.Windows.Forms.Label();
             this.txtToggledDelete = new System.Windows.Forms.TextBox();
             this.btnToggledDelete = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.lblLogin = new System.Windows.Forms.Label();
+            this.txtLogin = new System.Windows.Forms.TextBox();
+            this.btnLoginTwo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGetAll
@@ -334,11 +338,54 @@ namespace APIApp
             this.btnToggledDelete.Visible = false;
             this.btnToggledDelete.Click += new System.EventHandler(this.btnToggledDelete_Click);
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Location = new System.Drawing.Point(268, 12);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.TabIndex = 30;
+            this.btnLogin.Text = "Log in";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblLogin
+            // 
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Location = new System.Drawing.Point(12, 161);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(47, 13);
+            this.lblLogin.TabIndex = 31;
+            this.lblLogin.Text = "Login ID";
+            this.lblLogin.Visible = false;
+            // 
+            // txtLogin
+            // 
+            this.txtLogin.Location = new System.Drawing.Point(99, 158);
+            this.txtLogin.Name = "txtLogin";
+            this.txtLogin.Size = new System.Drawing.Size(201, 20);
+            this.txtLogin.TabIndex = 32;
+            this.txtLogin.Visible = false;
+            // 
+            // btnLoginTwo
+            // 
+            this.btnLoginTwo.Location = new System.Drawing.Point(145, 182);
+            this.btnLoginTwo.Name = "btnLoginTwo";
+            this.btnLoginTwo.Size = new System.Drawing.Size(88, 23);
+            this.btnLoginTwo.TabIndex = 33;
+            this.btnLoginTwo.Text = "Log in";
+            this.btnLoginTwo.UseVisualStyleBackColor = true;
+            this.btnLoginTwo.Visible = false;
+            this.btnLoginTwo.Click += new System.EventHandler(this.btnLoginTwo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLoginTwo);
+            this.Controls.Add(this.txtLogin);
+            this.Controls.Add(this.lblLogin);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.btnToggledDelete);
             this.Controls.Add(this.txtToggledDelete);
             this.Controls.Add(this.lblToggledDelete);
@@ -406,6 +453,10 @@ namespace APIApp
         private System.Windows.Forms.Label lblToggledDelete;
         private System.Windows.Forms.TextBox txtToggledDelete;
         private System.Windows.Forms.Button btnToggledDelete;
+        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Label lblLogin;
+        private System.Windows.Forms.TextBox txtLogin;
+        private System.Windows.Forms.Button btnLoginTwo;
     }
 }
 

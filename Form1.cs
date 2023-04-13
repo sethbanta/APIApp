@@ -16,6 +16,7 @@ namespace APIApp
     {
         private static readonly HttpClient client = new HttpClient();
         private static String json = null;
+        private static bool logged = false;
 
         public Form1()
         {
@@ -26,7 +27,7 @@ namespace APIApp
         {
             try
             {
-                json = await client.GetStringAsync("https://localhost:7180/customer");
+                json = await client.GetStringAsync("https://localhost:7180/customer/GetAllCustomers");
                 Console.Write(json);
             } 
             catch (HttpRequestException e)
@@ -46,7 +47,7 @@ namespace APIApp
                 };
                 var valuesConvert = JsonConvert.SerializeObject(values, Formatting.Indented);
                 var stringContent = new StringContent(json);
-                json = await client.GetStringAsync("https://localhost:7180/customer/" + name);
+                json = await client.GetStringAsync("https://localhost:7180/customer/GetCustomerByName/" + name);
             }
             catch
             {
@@ -64,7 +65,7 @@ namespace APIApp
                 };
                 var valuesConvert = JsonConvert.SerializeObject(values, Formatting.Indented);
                 var stringContent = new StringContent(json);
-                json = await client.GetStringAsync("https://localhost:7180/customer/" + number);
+                json = await client.GetStringAsync("https://localhost:7180/customer/GetCustomerById/" + number);
             }
             catch
             {
@@ -147,6 +148,9 @@ namespace APIApp
             lblToggledDelete.Visible = false;
             txtToggledDelete.Visible = false;
             btnToggledDelete.Visible = false;
+            lblLogin.Visible = false;
+            txtLogin.Visible = false;
+            btnLoginTwo.Visible = false;
         }
 
         private void btnUpdateByNumberToggle_Click(object sender, EventArgs e)
@@ -191,6 +195,69 @@ namespace APIApp
         private void btnToggledDelete_Click(object sender, EventArgs e)
         {
             //TODO: take in the value put in the text box and then send a delete request
+            var value = txtToggledDelete.Text.ToString();
+            deleteByName(value);
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            hideUpdateControls();
+            lblLogin.Visible = true;
+            txtLogin.Visible = true;
+            btnLoginTwo.Visible = true;
+        }
+
+        private void btnLoginTwo_Click(object sender, EventArgs e)
+        {
+            var value = txtLogin.Text.ToString();
+            loginWithGuid(value);
+            hideUpdateControls();
+            if (value == "0f8fad5b-d9cb-469f-a165-70867728950e")
+            {
+                btnLogin.Visible = false;
+                logged = true;
+            }      
+        }
+
+        static async Task loginWithGuid(string guid)
+        {
+            try
+            {
+                var values = new Dictionary<string, string>
+                {
+                    { "guid", guid}
+                };
+                var valuesConvert = JsonConvert.SerializeObject(values, Formatting.Indented);
+                var stringContent = new StringContent(json);
+                json = await client.GetStringAsync("https://localhost:7180/customer/Login/" + guid);
+            }
+            catch
+            {
+
+            }
+        }
+
+        static async Task deleteByName(string name)
+        {
+            try
+            {
+                if(logged == true)
+                {
+                    var values = new Dictionary<string, string>
+                    {
+                        { "name", name}
+                    };
+                    var valuesConvert = JsonConvert.SerializeObject(values, Formatting.Indented);
+                    var stringContent = new StringContent(json);
+                    json = await client.GetStringAsync("https://localhost:7180/customer/DeleteByName/" + name + "/0f8fad5b-d9cb-469f-a165-70867728950e");
+                }
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }
