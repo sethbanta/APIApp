@@ -173,6 +173,11 @@ namespace APIApp
             var newAge = txtToggledAge.Text.ToString();
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             updateCustomer(nameToUpdate, newName, newPhone, newAge, newPizza);
+            hideUpdateControls();
+            clearUpdateControls();
+            lblToggledUpdateByName.Visible = false;
+            txtToggledUpdateByName.Visible = false;
+            btnToggledUpdateByName.Visible = false;
         }
 
         private void btnAddNewToggle_Click(object sender, EventArgs e)
@@ -199,6 +204,11 @@ namespace APIApp
             var newAge = txtToggledAge.Text.ToString();
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             updateCustomerByNumber(numberToUpdate, newName, newPhone, newAge, newPizza);
+            hideUpdateControls();
+            clearUpdateControls();
+            lblToggledUpdateByNumber.Visible = false;
+            txtToggledUpdateByNumber.Visible = false;
+            btnToggledUpdateByNumber.Visible = false;
         }
 
         private void btnToggledAdd_Click(object sender, EventArgs e)
@@ -209,6 +219,9 @@ namespace APIApp
             var newAge = txtToggledAge.Text.ToString();
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             addNewCustomer(newName, newPhone, newAge, newPizza);
+            hideUpdateControls();
+            clearUpdateControls();
+            btnToggledAdd.Visible = false;
         }
 
         private void btnToggledDelete_Click(object sender, EventArgs e)
@@ -216,6 +229,11 @@ namespace APIApp
             //TODO: take in the value put in the text box and then send a delete request
             var value = txtToggledDelete.Text.ToString();
             deleteByName(value);
+            hideUpdateControls();
+            clearUpdateControls();
+            lblToggledDelete.Visible = false;
+            txtToggledDelete.Visible = false;
+            btnToggledDelete.Visible = false;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -351,6 +369,17 @@ namespace APIApp
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.Message);
             }
+        }
+
+        private void clearUpdateControls()
+        {
+            txtToggledAge.Text = "";
+            txtToggledDelete.Text = "";
+            txtToggledFavoritePizza.Text = "";
+            txtToggledName.Text = "";
+            txtToggledPhoneNumber.Text = "";
+            txtToggledUpdateByName.Text = "";
+            txtToggledUpdateByNumber.Text = "";
         }
 
     }
