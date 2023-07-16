@@ -136,6 +136,7 @@ namespace APIApp
             this.btnUpdateByNameToggle.TabIndex = 8;
             this.btnUpdateByNameToggle.Text = "Update by name";
             this.btnUpdateByNameToggle.UseVisualStyleBackColor = true;
+            this.btnUpdateByNameToggle.Visible = false;
             this.btnUpdateByNameToggle.Click += new System.EventHandler(this.btnUpdateByNameToggle_Click);
             // 
             // btnUpdateByNumberToggle
@@ -146,6 +147,7 @@ namespace APIApp
             this.btnUpdateByNumberToggle.TabIndex = 9;
             this.btnUpdateByNumberToggle.Text = "Update by number";
             this.btnUpdateByNumberToggle.UseVisualStyleBackColor = true;
+            this.btnUpdateByNumberToggle.Visible = false;
             this.btnUpdateByNumberToggle.Click += new System.EventHandler(this.btnUpdateByNumberToggle_Click);
             // 
             // btnAddNewToggle
@@ -156,6 +158,7 @@ namespace APIApp
             this.btnAddNewToggle.TabIndex = 10;
             this.btnAddNewToggle.Text = "Add new";
             this.btnAddNewToggle.UseVisualStyleBackColor = true;
+            this.btnAddNewToggle.Visible = false;
             this.btnAddNewToggle.Click += new System.EventHandler(this.btnAddNewToggle_Click);
             // 
             // btnDeleteToggle
@@ -166,6 +169,7 @@ namespace APIApp
             this.btnDeleteToggle.TabIndex = 11;
             this.btnDeleteToggle.Text = "Delete";
             this.btnDeleteToggle.UseVisualStyleBackColor = true;
+            this.btnDeleteToggle.Visible = false;
             this.btnDeleteToggle.Click += new System.EventHandler(this.btnDeleteToggle_Click);
             // 
             // txtToggledName

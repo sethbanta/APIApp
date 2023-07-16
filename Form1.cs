@@ -253,6 +253,10 @@ namespace APIApp
             {
                 btnLogin.Visible = false;
                 logged = true;
+                btnAddNewToggle.Visible = true;
+                btnUpdateByNameToggle.Visible = true;
+                btnUpdateByNumberToggle.Visible = true;
+                btnDeleteToggle.Visible = true;
             }      
         }
 
