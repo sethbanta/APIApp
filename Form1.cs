@@ -167,6 +167,12 @@ namespace APIApp
         private void btnToggledUpdateByName_Click(object sender, EventArgs e)
         {
             //TODO: take in the values put in the text boxes and then send a put request with the data to the api
+            var nameToUpdate = txtToggledUpdateByName.ToString();
+            var newName = txtToggledName.Text.ToString();
+            var newPhone = txtToggledPhoneNumber.Text.ToString();
+            var newAge = txtToggledAge.Text.ToString();
+            var newPizza = txtToggledFavoritePizza.Text.ToString();
+            updateCustomer(nameToUpdate, newName, newPhone, newAge, newPizza);
         }
 
         private void btnAddNewToggle_Click(object sender, EventArgs e)
@@ -290,6 +296,30 @@ namespace APIApp
             {
                 Console.WriteLine("\nException Caught!");
                 Console.WriteLine("Message :{0} ", e.InnerException);
+            }
+        }
+
+        static async Task updateCustomer(string nameToUpdate, string name, string phoneNumber, string age, string pizza) 
+        {
+            try
+            {
+                var values = new Dictionary<string, string>
+                    {
+                        { "Name", name},
+                        { "PhoneNumber", phoneNumber},
+                        { "Age", age},
+                        { "FavoritePizza", pizza}
+                    };
+                var customer = JsonConvert.SerializeObject(values, Formatting.Indented);
+                Console.WriteLine(customer);
+                var requestContent = new StringContent(customer, Encoding.UTF8, "application/json");
+                var response = await client.PutAsync("https://localhost:7180/customer/UpdateByNameFromApp/" + nameToUpdate, requestContent);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.Message);
             }
         }
 

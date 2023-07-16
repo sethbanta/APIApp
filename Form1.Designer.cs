@@ -289,7 +289,7 @@ namespace APIApp
             // 
             // btnToggledAdd
             // 
-            this.btnToggledAdd.Location = new System.Drawing.Point(98, 413);
+            this.btnToggledAdd.Location = new System.Drawing.Point(99, 413);
             this.btnToggledAdd.Name = "btnToggledAdd";
             this.btnToggledAdd.Size = new System.Drawing.Size(75, 23);
             this.btnToggledAdd.TabIndex = 25;
@@ -300,7 +300,7 @@ namespace APIApp
             // 
             // btnToggledUpdateByNumber
             // 
-            this.btnToggledUpdateByNumber.Location = new System.Drawing.Point(99, 413);
+            this.btnToggledUpdateByNumber.Location = new System.Drawing.Point(98, 413);
             this.btnToggledUpdateByNumber.Name = "btnToggledUpdateByNumber";
             this.btnToggledUpdateByNumber.Size = new System.Drawing.Size(75, 23);
             this.btnToggledUpdateByNumber.TabIndex = 26;
