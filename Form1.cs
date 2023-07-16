@@ -192,6 +192,11 @@ namespace APIApp
         private void btnToggledAdd_Click(object sender, EventArgs e)
         {
             //TODO: take in the values put in the text boxes and then send a put request with the data to the api
+            var newName = txtToggledName.Text.ToString();
+            var newPhone = txtToggledPhoneNumber.Text.ToString();
+            var newAge = txtToggledAge.Text.ToString();
+            var newPizza = txtToggledFavoritePizza.Text.ToString();
+            addNewCustomer(newName, newPhone, newAge, newPizza);
         }
 
         private void btnToggledDelete_Click(object sender, EventArgs e)
@@ -231,11 +236,14 @@ namespace APIApp
                 };
                 var valuesConvert = JsonConvert.SerializeObject(values, Formatting.Indented);
                 var stringContent = new StringContent(json);
+                Console.WriteLine(valuesConvert);
+                Console.WriteLine(stringContent);
                 json = await client.GetStringAsync("https://localhost:7180/customer/Login/" + guid);
             }
-            catch
+            catch (HttpRequestException e)
             {
-
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.InnerException);
             }
         }
 
@@ -260,5 +268,30 @@ namespace APIApp
 
             }
         }
+
+        static async Task addNewCustomer(string name, string phoneNumber, string age, string pizza)
+        {
+            try
+            {
+                var values = new Dictionary<string, string>
+                    {
+                        { "Name", name},
+                        { "PhoneNumber", phoneNumber},
+                        { "Age", age},
+                        { "FavoritePizza", pizza}
+                    };
+                var customer = JsonConvert.SerializeObject(values, Formatting.Indented);
+                Console.WriteLine(customer);
+                var requestContent = new StringContent(customer, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync("https://localhost:7180/customer/NewCustomer/", requestContent);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.InnerException);
+            }
+        }
+
     }
 }
