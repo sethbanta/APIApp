@@ -170,7 +170,21 @@ namespace APIApp
             var nameToUpdate = txtToggledUpdateByName.ToString();
             var newName = txtToggledName.Text.ToString();
             var newPhone = txtToggledPhoneNumber.Text.ToString();
+            if (newPhone.Length != 10)
+            {
+                //entered a number that was too short/long
+                rtbOutput.Text += "Phone number entered was too short ot long please try again";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newAge = txtToggledAge.Text.ToString();
+            if (newAge.Length > 3 | (newAge.Length == 3 && (newAge.Substring(0, 2) != "12" && newAge.Substring(0, 2) != "11" && newAge.Substring(0, 2) != "10")))
+            {
+                //entered an age that was too large or unrealistic (someone older than 122 which is already unrealistic)
+                rtbOutput.Text += "Invalid age was entered";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             updateCustomer(nameToUpdate, newName, newPhone, newAge, newPizza);
             hideUpdateControls();
@@ -199,9 +213,30 @@ namespace APIApp
         {
             //TODO: take in the values put in the text boxes and then send a put request with the data to the api
             var numberToUpdate = txtToggledUpdateByNumber.Text.ToString();
+            if (numberToUpdate.Length != 10)
+            {
+                //entered a number that was too short/long
+                rtbOutput.Text += "Phone number entered was too short or long please try again";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newName = txtToggledName.Text.ToString();
             var newPhone = txtToggledPhoneNumber.Text.ToString();
+            if (newPhone.Length != 10)
+            {
+                //entered a number that was too short/long
+                rtbOutput.Text += "Phone number entered was too short ot long please try again";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newAge = txtToggledAge.Text.ToString();
+            if (newAge.Length > 3 | (newAge.Length == 3 && (newAge.Substring(0, 2) != "12" && newAge.Substring(0, 2) != "11" && newAge.Substring(0, 2) != "10")))
+            {
+                //entered an age that was too large or unrealistic (someone older than 122 which is already unrealistic)
+                rtbOutput.Text += "Invalid age was entered";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             updateCustomerByNumber(numberToUpdate, newName, newPhone, newAge, newPizza);
             hideUpdateControls();
@@ -216,7 +251,21 @@ namespace APIApp
             //TODO: take in the values put in the text boxes and then send a put request with the data to the api
             var newName = txtToggledName.Text.ToString();
             var newPhone = txtToggledPhoneNumber.Text.ToString();
+            if (newPhone.Length != 10)
+            {
+                //entered a number that was too short/long
+                rtbOutput.Text += "Phone number entered was too short ot long please try again";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newAge = txtToggledAge.Text.ToString();
+            if (newAge.Length > 3 | (newAge.Length == 3 && (newAge.Substring(0, 2) != "12" && newAge.Substring(0, 2) != "11" && newAge.Substring(0, 2) != "10")))
+            {
+                //entered an age that was too large or unrealistic (someone older than 122 which is already unrealistic)
+                rtbOutput.Text += "Invalid age was entered";
+                rtbOutput.Text += Environment.NewLine;
+                return;
+            }
             var newPizza = txtToggledFavoritePizza.Text.ToString();
             addNewCustomer(newName, newPhone, newAge, newPizza);
             hideUpdateControls();
