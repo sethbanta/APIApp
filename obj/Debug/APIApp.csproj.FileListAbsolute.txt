@@ -11,3 +11,16 @@ C:\Users\Seth\source\repos\APIApp\obj\Debug\APIApp.pdb
 C:\Users\Seth\source\repos\APIApp\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Seth\source\repos\APIApp\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Seth\source\repos\APIApp\obj\Debug\APIApp.csproj.CopyComplete
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\bin\Debug\APIApp.exe.config
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\bin\Debug\APIApp.exe
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\bin\Debug\APIApp.pdb
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\bin\Debug\Newtonsoft.Json.dll
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.csproj.AssemblyReference.cache
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.Form1.resources
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.Properties.Resources.resources
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.csproj.GenerateResource.cache
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.csproj.CoreCompileInputs.cache
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.csproj.CopyComplete
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.exe
+C:\Users\decay\OneDrive\Documents\GitHub\APIApp\obj\Debug\APIApp.pdb

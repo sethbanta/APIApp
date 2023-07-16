@@ -72,7 +72,7 @@ namespace APIApp
             this.btnGetAll.TabIndex = 0;
             this.btnGetAll.Text = "Get all customers";
             this.btnGetAll.UseVisualStyleBackColor = true;
-            this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_Click);
+            this.btnGetAll.Click += new System.EventHandler(this.btnGetAll_ClickAsync);
             // 
             // rtbOutput
             // 

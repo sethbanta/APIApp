@@ -33,7 +33,7 @@ namespace APIApp
             catch (HttpRequestException e)
             {
                 Console.WriteLine("\nException Caught!");
-                Console.WriteLine("Message :{0} ", e.Message);
+                Console.WriteLine("Message :{0} ", e.InnerException);
             }
         }
 
@@ -49,9 +49,10 @@ namespace APIApp
                 var stringContent = new StringContent(json);
                 json = await client.GetStringAsync("https://localhost:7180/customer/GetCustomerByName/" + name);
             }
-            catch
+            catch (HttpRequestException e)
             {
-
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.InnerException);
             }
         }
 
@@ -67,23 +68,24 @@ namespace APIApp
                 var stringContent = new StringContent(json);
                 json = await client.GetStringAsync("https://localhost:7180/customer/GetCustomerById/" + number);
             }
-            catch
+            catch (HttpRequestException e)
             {
-
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.InnerException);
             }
         }
 
-        private void btnGetAll_Click(object sender, EventArgs e)
+        private async void btnGetAll_ClickAsync(object sender, EventArgs e)
         {
-            getAll();
+            await getAll();
             rtbOutput.Text += json;
             rtbOutput.Text += Environment.NewLine;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private async void button1_Click(object sender, EventArgs e)
         {
             var value = tbGetByName.Text.ToString();
-            getByName(value);
+            await getByName(value);
             rtbOutput.Text += json;
             rtbOutput.Text += Environment.NewLine;
         }
@@ -98,11 +100,11 @@ namespace APIApp
             //created this by accident and if i delete it, it destroys the design preview in visual studio
         }
 
-        private void btnGetByNumber_Click(object sender, EventArgs e)
+        private async void btnGetByNumber_Click(object sender, EventArgs e)
         {
             string text = tbGetByNumber.Text.ToString();
             var value = Int32.Parse(text);
-            getByNumber(value);
+            await getByNumber(value);
             rtbOutput.Text += json;
             rtbOutput.Text += Environment.NewLine;
         }
@@ -197,7 +199,6 @@ namespace APIApp
             //TODO: take in the value put in the text box and then send a delete request
             var value = txtToggledDelete.Text.ToString();
             deleteByName(value);
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
