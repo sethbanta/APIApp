@@ -497,5 +497,23 @@ namespace APIApp
                 e.Handled = true;
             }
         }
+
+        private void txtToggledUpdateByNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsDigit(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtToggledAge_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsDigit(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

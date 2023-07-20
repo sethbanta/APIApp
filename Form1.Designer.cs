@@ -229,6 +229,7 @@ namespace APIApp
             this.txtToggledAge.Size = new System.Drawing.Size(100, 20);
             this.txtToggledAge.TabIndex = 17;
             this.txtToggledAge.Visible = false;
+            this.txtToggledAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledAge_KeyPress);
             // 
             // lblFavoritePizza
             // 
@@ -281,11 +282,12 @@ namespace APIApp
             // 
             // txtToggledUpdateByNumber
             // 
-            this.txtToggledUpdateByNumber.Location = new System.Drawing.Point(142, 182);
+            this.txtToggledUpdateByNumber.Location = new System.Drawing.Point(107, 158);
             this.txtToggledUpdateByNumber.Name = "txtToggledUpdateByNumber";
             this.txtToggledUpdateByNumber.Size = new System.Drawing.Size(193, 20);
             this.txtToggledUpdateByNumber.TabIndex = 23;
             this.txtToggledUpdateByNumber.Visible = false;
+            this.txtToggledUpdateByNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledUpdateByNumber_KeyPress);
             // 
             // lblToggledUpdateByNumber
             // 
@@ -310,7 +312,7 @@ namespace APIApp
             // 
             // btnToggledUpdateByNumber
             // 
-            this.btnToggledUpdateByNumber.Location = new System.Drawing.Point(98, 413);
+            this.btnToggledUpdateByNumber.Location = new System.Drawing.Point(99, 413);
             this.btnToggledUpdateByNumber.Name = "btnToggledUpdateByNumber";
             this.btnToggledUpdateByNumber.Size = new System.Drawing.Size(75, 23);
             this.btnToggledUpdateByNumber.TabIndex = 26;
@@ -371,7 +373,7 @@ namespace APIApp
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(142, 182);
+            this.txtLogin.Location = new System.Drawing.Point(98, 158);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(201, 20);
             this.txtLogin.TabIndex = 32;
