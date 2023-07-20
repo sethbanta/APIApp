@@ -307,6 +307,7 @@ namespace APIApp
                 btnUpdateByNumberToggle.Visible = true;
                 btnDeleteToggle.Visible = true;
                 btnExport.Visible = true;
+                btnImport.Visible = true;
             }      
         }
 
@@ -522,6 +523,13 @@ namespace APIApp
             var response = await client.GetAsync("https://localhost:7180/customer/save");
             response.EnsureSuccessStatusCode();
             rtbOutput.Text += "Saved" + Environment.NewLine;
+        }
+
+        private async void btnImport_Click(object sender, EventArgs e)
+        {
+            var response = await client.GetAsync("https://localhost:7180/customer/import");
+            response.EnsureSuccessStatusCode();
+            rtbOutput.Text += "Imported" + Environment.NewLine;
         }
     }
 }
