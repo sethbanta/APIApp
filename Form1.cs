@@ -435,5 +435,22 @@ namespace APIApp
             txtToggledUpdateByNumber.Text = "";
         }
 
+        private void txtToggledPhoneNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsDigit(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbGetByNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsDigit(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

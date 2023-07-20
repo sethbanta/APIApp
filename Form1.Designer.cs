@@ -127,6 +127,7 @@ namespace APIApp
             this.tbGetByNumber.Size = new System.Drawing.Size(250, 20);
             this.tbGetByNumber.TabIndex = 7;
             this.tbGetByNumber.TextChanged += new System.EventHandler(this.tbGetByNumber_TextChanged);
+            this.tbGetByNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGetByNumber_KeyPress);
             // 
             // btnUpdateByNameToggle
             // 
@@ -207,6 +208,7 @@ namespace APIApp
             this.txtToggledPhoneNumber.Size = new System.Drawing.Size(100, 20);
             this.txtToggledPhoneNumber.TabIndex = 15;
             this.txtToggledPhoneNumber.Visible = false;
+            this.txtToggledPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledPhoneNumber_KeyPress);
             // 
             // lblAge
             // 
