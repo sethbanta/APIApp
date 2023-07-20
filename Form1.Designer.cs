@@ -99,6 +99,7 @@ namespace APIApp
             this.tbGetByName.Name = "tbGetByName";
             this.tbGetByName.Size = new System.Drawing.Size(250, 20);
             this.tbGetByName.TabIndex = 3;
+            this.tbGetByName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbGetByName_KeyPress);
             // 
             // btnClearRtb
             // 
@@ -180,6 +181,7 @@ namespace APIApp
             this.txtToggledName.Size = new System.Drawing.Size(100, 20);
             this.txtToggledName.TabIndex = 12;
             this.txtToggledName.Visible = false;
+            this.txtToggledName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledName_KeyPress);
             // 
             // lblName
             // 
@@ -245,6 +247,7 @@ namespace APIApp
             this.txtToggledFavoritePizza.Size = new System.Drawing.Size(100, 20);
             this.txtToggledFavoritePizza.TabIndex = 19;
             this.txtToggledFavoritePizza.Visible = false;
+            this.txtToggledFavoritePizza.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledFavoritePizza_KeyPress);
             // 
             // btnToggledUpdateByName
             // 
@@ -274,10 +277,11 @@ namespace APIApp
             this.txtToggledUpdateByName.Size = new System.Drawing.Size(192, 20);
             this.txtToggledUpdateByName.TabIndex = 22;
             this.txtToggledUpdateByName.Visible = false;
+            this.txtToggledUpdateByName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledUpdateByName_KeyPress);
             // 
             // txtToggledUpdateByNumber
             // 
-            this.txtToggledUpdateByNumber.Location = new System.Drawing.Point(107, 158);
+            this.txtToggledUpdateByNumber.Location = new System.Drawing.Point(142, 182);
             this.txtToggledUpdateByNumber.Name = "txtToggledUpdateByNumber";
             this.txtToggledUpdateByNumber.Size = new System.Drawing.Size(193, 20);
             this.txtToggledUpdateByNumber.TabIndex = 23;
@@ -332,6 +336,7 @@ namespace APIApp
             this.txtToggledDelete.Size = new System.Drawing.Size(206, 20);
             this.txtToggledDelete.TabIndex = 28;
             this.txtToggledDelete.Visible = false;
+            this.txtToggledDelete.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToggledDelete_KeyPress);
             // 
             // btnToggledDelete
             // 
@@ -366,7 +371,7 @@ namespace APIApp
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(99, 158);
+            this.txtLogin.Location = new System.Drawing.Point(142, 182);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(201, 20);
             this.txtLogin.TabIndex = 32;

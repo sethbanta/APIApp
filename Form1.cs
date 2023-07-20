@@ -452,5 +452,50 @@ namespace APIApp
                 e.Handled = true;
             }
         }
+
+        private void tbGetByName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsLetter(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtToggledDelete_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsLetter(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtToggledName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsLetter(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtToggledFavoritePizza_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsLetter(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtToggledUpdateByName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char c = Convert.ToChar(e.KeyChar);
+            if (!char.IsLetter(c) && c != (char)Keys.Back)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
