@@ -62,6 +62,7 @@ namespace APIApp
             this.lblLogin = new System.Windows.Forms.Label();
             this.txtLogin = new System.Windows.Forms.TextBox();
             this.btnLoginTwo = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGetAll
@@ -390,11 +391,23 @@ namespace APIApp
             this.btnLoginTwo.Visible = false;
             this.btnLoginTwo.Click += new System.EventHandler(this.btnLoginTwo_Click);
             // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(291, 384);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 34;
+            this.btnExport.Text = "Export";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Visible = false;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.btnLoginTwo);
             this.Controls.Add(this.txtLogin);
             this.Controls.Add(this.lblLogin);
@@ -470,6 +483,7 @@ namespace APIApp
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.TextBox txtLogin;
         private System.Windows.Forms.Button btnLoginTwo;
+        private System.Windows.Forms.Button btnExport;
     }
 }
 

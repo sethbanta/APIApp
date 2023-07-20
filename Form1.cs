@@ -306,6 +306,7 @@ namespace APIApp
                 btnUpdateByNameToggle.Visible = true;
                 btnUpdateByNumberToggle.Visible = true;
                 btnDeleteToggle.Visible = true;
+                btnExport.Visible = true;
             }      
         }
 
@@ -514,6 +515,13 @@ namespace APIApp
             {
                 e.Handled = true;
             }
+        }
+
+        private async void btnExport_Click(object sender, EventArgs e)
+        {
+            var response = await client.GetAsync("https://localhost:7180/customer/save");
+            response.EnsureSuccessStatusCode();
+            rtbOutput.Text += "Saved" + Environment.NewLine;
         }
     }
 }
